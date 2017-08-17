@@ -1,0 +1,20 @@
+2017-07-03 14:37:31,815 INFO runviewer.server: Received hdf5 file: Z:\Experiments\labscript_shared_drive\Experiments\rb_chip\20170703T143711_connectiontable_0.h5
+2017-07-03 14:37:31,815 INFO runviewer: local filepath: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\20170703T143711_connectiontable_0.h5
+2017-07-03 14:48:48,006 ERROR runviewer: Got an exception:
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda2\lib\runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "C:\ProgramData\Anaconda2\lib\runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "C:\labscript_suite\runviewer\__main__.py", line 47, in <module>
+    import zprocess.locking, labscript_utils.h5_lock, h5py
+  File "C:\labscript_suite\labscript_utils\h5_lock.py", line 100, in <module>
+    connect_to_zlock_server()
+  File "C:\labscript_suite\labscript_utils\h5_lock.py", line 62, in connect_to_zlock_server
+    config = LabConfig(required_params={'ports':['zlock'],'servers':['zlock']})
+  File "C:\labscript_suite\labscript_utils\labconfig.py", line 76, in __init__
+    self.get(section,option)
+  File "C:\ProgramData\Anaconda2\lib\ConfigParser.py", line 607, in get
+    raise NoSectionError(section)
+NoSectionError: No section: 'ports'
+

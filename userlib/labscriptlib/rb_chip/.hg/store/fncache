@@ -1,0 +1,6 @@
+data/shared_connectiontable.py.i
+data/connectiontable.py.i
+data/test_top_imaging.py.i
+data/test_motload.py.i
+data/test_BEC.py.i
+data/__init__.py.i
