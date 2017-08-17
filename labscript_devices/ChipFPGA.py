@@ -272,7 +272,7 @@ class ChipFPGATab(DeviceTab):
         num_col = self.ui.load_table.columnCount()
         table = np.zeros((num_row,num_col),dtype = int)
         #self.ui.write_status_edit.setText(str(self.ui.load_table.item(1,1).text()))
-
+        
 
         for i in range(num_row):
             for j in range(num_col):
@@ -284,17 +284,16 @@ class ChipFPGATab(DeviceTab):
         # load_string = str(chr_load_list)
 
         self.write_raw(chr_load_list)
-        read_string = self.read_raw(num_col*num_row)
-        read_list = map(ord,read_string)
-        read_array = np.array(read_list)
-        read_table = read_array.reshape((-1,self.col_num))
-
+        
+        read_table = self.read_table_func(num_row*num_col)
         # self.ui.read_status_edit.setText(str(load_string.shape))
         
         
         compare = read_table == table
         wrong_ind = np.where(compare==0)
-        wrong_num = wrong_ind[0].shape[1]
+        self.ui.read_status_edit.setText(str(type(wrong_ind[0])))
+        wrong_col = wrong_ind[0]
+        wrong_num = len(wrong_col)
         for w in range(wrong_num):
             row_ind = wrong_ind[0][w]
             col_ind = wrong_ind[1][w]
@@ -302,7 +301,7 @@ class ChipFPGATab(DeviceTab):
             value = table[row_ind,col_ind]
             self.change_one(self.chipfpga_usb,address,value)
             
-
+        read_table = self.read_table_func(num_row*num_col)
         if (read_table == table).all() == False:
             self.ui.read_status_edit.setText('mismatch')
 
@@ -314,7 +313,12 @@ class ChipFPGATab(DeviceTab):
 
         #self.ui.write_status_edit.setText(str(uni_load_list))
   
-
+    def read_table_func(self,number):
+        read_string = self.read_raw(number)
+        read_list = map(ord,read_string)
+        read_array = np.array(read_list)
+        read_table = read_array.reshape((-1,self.col_num))
+        return read_table
     def read_raw(self,number):
         md = self.chipfpga_usb
         num1_str,num2_str = self.numto2chr(number)

@@ -7016,3 +7016,864 @@ Exception: Device failed to initialise
 2017-08-15 10:33:40,986 INFO BLACS.chipfpga: close_tab called
 2017-08-15 10:33:40,990 INFO BLACS.pulseblaster_0: close_tab called
 2017-08-15 10:33:40,992 INFO BLACS: quitting
+2017-08-17 15:44:24,506 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:44:24,513 INFO BLACS: Platform: win32
+2017-08-17 15:44:24,513 INFO BLACS: Platform: win32
+2017-08-17 15:44:24,513 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:44:24,513 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:44:24,513 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:44:24,513 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:44:24,513 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:44:24,513 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:44:24,513 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:44:24,513 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:44:24,513 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:44:24,513 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:44:24,513 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:44:24,513 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:44:24,513 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:44:24,513 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:44:24,513 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:44:24,513 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:44:24,513 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:44:24,513 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:44:24,513 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:44:24,513 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:44:24,944 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:44:24,946 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\__main__.py", line 716, in <module>
+    experiment_server = ExperimentServer(port)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\zprocess\__init__.py", line 97, in __init__
+    self.sock.bind('%s:%s' % (str(self.bind_address), str(self.port)))
+  File "zmq/backend/cython/socket.pyx", line 495, in zmq.backend.cython.socket.Socket.bind (zmq\backend\cython\socket.c:5653)
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc (zmq\backend\cython\socket.c:10014)
+    raise ZMQError(errno)
+ZMQError: Address in use
+
+2017-08-17 15:44:25,176 INFO BLACS: connection table loaded
+2017-08-17 15:44:25,492 INFO BLACS: QApplication instantiated
+2017-08-17 15:44:25,492 INFO BLACS: Loading BLACS ui
+2017-08-17 15:44:26,963 INFO BLACS: BLACS ui loaded
+2017-08-17 15:44:26,963 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:44:26,963 INFO BLACS: Loading front panel settings
+2017-08-17 15:44:27,092 INFO BLACS: restoring window data
+2017-08-17 15:44:27,299 INFO BLACS: Creating tab widgets
+2017-08-17 15:44:27,299 INFO BLACS: Instantiating devices
+2017-08-17 15:44:27,299 INFO BLACS: instantiating chipfpga
+2017-08-17 15:44:32,328 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:44:32,736 INFO BLACS: reordering tabs
+2017-08-17 15:44:32,746 INFO BLACS: starting analysis submission thread
+2017-08-17 15:44:32,763 INFO BLACS: starting queue manager thread
+2017-08-17 15:44:32,765 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:44:32,765 INFO BLACS: instantiating plugins
+2017-08-17 15:44:32,766 INFO BLACS: setting up notification system
+2017-08-17 15:44:32,819 INFO BLACS: setting up preferences system
+2017-08-17 15:44:32,838 INFO BLACS: showing UI
+2017-08-17 15:44:32,838 INFO BLACS: BLACS instantiated
+2017-08-17 15:44:32,993 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:44:33,003 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:44:34,134 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:44:34,147 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:44:34,161 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:44:52,145 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:44:59,749 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 297, in write
+    wrong_num = wrong_ind[0].shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:47:48,539 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 297, in write
+    wrong_num = wrong_ind[0].shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:49:34,864 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:49:43,066 INFO BLACS: destroy called
+2017-08-17 15:49:43,098 INFO BLACS: Destroying tabs
+2017-08-17 15:49:43,112 INFO BLACS.queue_manager.thread: Stopping
+2017-08-17 15:49:43,177 INFO BLACS: destroy called
+2017-08-17 15:49:43,210 INFO BLACS: finalise_quit called
+2017-08-17 15:49:43,210 INFO BLACS.chipfpga: close_tab called
+2017-08-17 15:49:43,213 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 15:49:43,214 INFO BLACS: quitting
+2017-08-17 15:49:43,292 INFO BLACS: relaunching BLACS after quit
+2017-08-17 15:49:46,773 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:49:46,773 INFO BLACS: Platform: win32
+2017-08-17 15:49:46,773 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:49:46,773 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:49:46,773 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:49:46,773 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:49:46,773 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:49:46,773 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:49:46,773 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:49:46,773 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:49:46,773 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:49:46,773 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:49:46,878 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:49:46,900 INFO BLACS: connection table loaded
+2017-08-17 15:49:46,905 INFO BLACS: QApplication instantiated
+2017-08-17 15:49:46,905 INFO BLACS: Loading BLACS ui
+2017-08-17 15:49:46,956 INFO BLACS: BLACS ui loaded
+2017-08-17 15:49:46,957 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:49:46,957 INFO BLACS: Loading front panel settings
+2017-08-17 15:49:46,990 INFO BLACS: restoring window data
+2017-08-17 15:49:47,005 INFO BLACS: Creating tab widgets
+2017-08-17 15:49:47,006 INFO BLACS: Instantiating devices
+2017-08-17 15:49:47,006 INFO BLACS: instantiating chipfpga
+2017-08-17 15:49:47,632 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:49:47,971 INFO BLACS: reordering tabs
+2017-08-17 15:49:47,973 INFO BLACS: starting analysis submission thread
+2017-08-17 15:49:47,979 INFO BLACS: starting queue manager thread
+2017-08-17 15:49:47,980 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:49:47,980 INFO BLACS: instantiating plugins
+2017-08-17 15:49:47,980 INFO BLACS: setting up notification system
+2017-08-17 15:49:48,026 INFO BLACS: setting up preferences system
+2017-08-17 15:49:48,036 INFO BLACS: showing UI
+2017-08-17 15:49:48,036 INFO BLACS: BLACS instantiated
+2017-08-17 15:49:48,105 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:49:48,121 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:49:49,233 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:49:49,265 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:49:49,272 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:49:59,943 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:50:07,549 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 298, in write
+    wrong_num = wrong_ind[0].shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:51:17,493 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:51:24,930 INFO BLACS: destroy called
+2017-08-17 15:51:24,948 INFO BLACS: Destroying tabs
+2017-08-17 15:51:25,043 INFO BLACS: destroy called
+2017-08-17 15:51:25,055 INFO BLACS: finalise_quit called
+2017-08-17 15:51:25,055 INFO BLACS.chipfpga: close_tab called
+2017-08-17 15:51:25,059 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 15:51:25,061 INFO BLACS: quitting
+2017-08-17 15:51:25,151 INFO BLACS: relaunching BLACS after quit
+2017-08-17 15:51:28,664 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:51:28,664 INFO BLACS: Platform: win32
+2017-08-17 15:51:28,664 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:51:28,664 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:51:28,664 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:51:28,664 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:51:28,664 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:51:28,665 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:51:28,665 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:51:28,665 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:51:28,665 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:51:28,665 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:51:28,816 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:51:28,836 INFO BLACS: connection table loaded
+2017-08-17 15:51:28,842 INFO BLACS: QApplication instantiated
+2017-08-17 15:51:28,844 INFO BLACS: Loading BLACS ui
+2017-08-17 15:51:28,907 INFO BLACS: BLACS ui loaded
+2017-08-17 15:51:28,907 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:51:28,907 INFO BLACS: Loading front panel settings
+2017-08-17 15:51:28,940 INFO BLACS: restoring window data
+2017-08-17 15:51:28,953 INFO BLACS: Creating tab widgets
+2017-08-17 15:51:28,954 INFO BLACS: Instantiating devices
+2017-08-17 15:51:28,954 INFO BLACS: instantiating chipfpga
+2017-08-17 15:51:29,562 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:51:29,923 INFO BLACS: reordering tabs
+2017-08-17 15:51:29,924 INFO BLACS: starting analysis submission thread
+2017-08-17 15:51:29,928 INFO BLACS: starting queue manager thread
+2017-08-17 15:51:29,930 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:51:29,930 INFO BLACS: instantiating plugins
+2017-08-17 15:51:29,930 INFO BLACS: setting up notification system
+2017-08-17 15:51:29,974 INFO BLACS: setting up preferences system
+2017-08-17 15:51:29,984 INFO BLACS: showing UI
+2017-08-17 15:51:29,986 INFO BLACS: BLACS instantiated
+2017-08-17 15:51:30,052 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:51:30,069 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:51:31,243 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:51:31,275 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:51:31,282 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:51:34,773 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:51:42,385 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 298, in write
+    wrong_num = wrong_ind[0].shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:52:20,993 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:52:25,842 INFO BLACS: destroy called
+2017-08-17 15:52:25,861 INFO BLACS: Destroying tabs
+2017-08-17 15:52:25,951 INFO BLACS: destroy called
+2017-08-17 15:52:25,973 INFO BLACS: finalise_quit called
+2017-08-17 15:52:25,973 INFO BLACS.chipfpga: close_tab called
+2017-08-17 15:52:25,976 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 15:52:25,979 INFO BLACS: quitting
+2017-08-17 15:52:26,065 INFO BLACS: relaunching BLACS after quit
+2017-08-17 15:52:29,585 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:52:29,585 INFO BLACS: Platform: win32
+2017-08-17 15:52:29,585 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:52:29,585 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:52:29,585 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:52:29,585 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:52:29,585 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:52:29,585 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:52:29,585 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:52:29,585 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:52:29,586 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:52:29,586 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:52:29,721 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:52:29,743 INFO BLACS: connection table loaded
+2017-08-17 15:52:29,749 INFO BLACS: QApplication instantiated
+2017-08-17 15:52:29,749 INFO BLACS: Loading BLACS ui
+2017-08-17 15:52:29,819 INFO BLACS: BLACS ui loaded
+2017-08-17 15:52:29,821 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:52:29,821 INFO BLACS: Loading front panel settings
+2017-08-17 15:52:29,852 INFO BLACS: restoring window data
+2017-08-17 15:52:29,867 INFO BLACS: Creating tab widgets
+2017-08-17 15:52:29,868 INFO BLACS: Instantiating devices
+2017-08-17 15:52:29,868 INFO BLACS: instantiating chipfpga
+2017-08-17 15:52:30,484 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:52:30,846 INFO BLACS: reordering tabs
+2017-08-17 15:52:30,848 INFO BLACS: starting analysis submission thread
+2017-08-17 15:52:30,852 INFO BLACS: starting queue manager thread
+2017-08-17 15:52:30,854 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:52:30,854 INFO BLACS: instantiating plugins
+2017-08-17 15:52:30,854 INFO BLACS: setting up notification system
+2017-08-17 15:52:30,898 INFO BLACS: setting up preferences system
+2017-08-17 15:52:30,908 INFO BLACS: showing UI
+2017-08-17 15:52:30,908 INFO BLACS: BLACS instantiated
+2017-08-17 15:52:30,979 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:52:30,996 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:52:32,111 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:52:32,122 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:52:32,137 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:52:40,865 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:52:48,483 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 298, in write
+    wrong_num = wrong_ind[0].shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:54:05,905 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 298, in write
+    wrong_num = wrong_ind[0].shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:55:06,957 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:55:11,683 INFO BLACS: destroy called
+2017-08-17 15:55:11,701 INFO BLACS: Destroying tabs
+2017-08-17 15:55:11,792 INFO BLACS: destroy called
+2017-08-17 15:55:11,805 INFO BLACS: finalise_quit called
+2017-08-17 15:55:11,805 INFO BLACS.chipfpga: close_tab called
+2017-08-17 15:55:11,809 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 15:55:11,811 INFO BLACS: quitting
+2017-08-17 15:55:11,903 INFO BLACS: relaunching BLACS after quit
+2017-08-17 15:55:15,381 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:55:15,381 INFO BLACS: Platform: win32
+2017-08-17 15:55:15,381 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:55:15,381 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:55:15,381 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:55:15,381 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:55:15,381 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:55:15,381 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:55:15,381 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:55:15,381 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:55:15,381 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:55:15,381 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:55:15,486 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:55:15,506 INFO BLACS: connection table loaded
+2017-08-17 15:55:15,513 INFO BLACS: QApplication instantiated
+2017-08-17 15:55:15,513 INFO BLACS: Loading BLACS ui
+2017-08-17 15:55:15,562 INFO BLACS: BLACS ui loaded
+2017-08-17 15:55:15,562 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:55:15,563 INFO BLACS: Loading front panel settings
+2017-08-17 15:55:15,595 INFO BLACS: restoring window data
+2017-08-17 15:55:15,609 INFO BLACS: Creating tab widgets
+2017-08-17 15:55:15,611 INFO BLACS: Instantiating devices
+2017-08-17 15:55:15,611 INFO BLACS: instantiating chipfpga
+2017-08-17 15:55:16,233 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:55:16,572 INFO BLACS: reordering tabs
+2017-08-17 15:55:16,573 INFO BLACS: starting analysis submission thread
+2017-08-17 15:55:16,579 INFO BLACS: starting queue manager thread
+2017-08-17 15:55:16,579 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:55:16,581 INFO BLACS: instantiating plugins
+2017-08-17 15:55:16,581 INFO BLACS: setting up notification system
+2017-08-17 15:55:16,625 INFO BLACS: setting up preferences system
+2017-08-17 15:55:16,637 INFO BLACS: showing UI
+2017-08-17 15:55:16,637 INFO BLACS: BLACS instantiated
+2017-08-17 15:55:16,704 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:55:16,720 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:55:17,832 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:55:17,845 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:55:17,859 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:56:11,351 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:56:18,956 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 298, in write
+    wrong_num = (wrong_ind[0]).shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:56:56,292 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:57:27,273 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:57:31,308 INFO BLACS: destroy called
+2017-08-17 15:57:31,328 INFO BLACS: Destroying tabs
+2017-08-17 15:57:31,417 INFO BLACS: destroy called
+2017-08-17 15:57:31,431 INFO BLACS: finalise_quit called
+2017-08-17 15:57:31,431 INFO BLACS.chipfpga: close_tab called
+2017-08-17 15:57:31,434 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 15:57:31,437 INFO BLACS: quitting
+2017-08-17 15:57:31,528 INFO BLACS: relaunching BLACS after quit
+2017-08-17 15:57:35,013 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:57:35,013 INFO BLACS: Platform: win32
+2017-08-17 15:57:35,013 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:57:35,013 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:57:35,013 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:57:35,013 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:57:35,013 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:57:35,013 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:57:35,013 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:57:35,013 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:57:35,013 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:57:35,013 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:57:35,119 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:57:35,141 INFO BLACS: connection table loaded
+2017-08-17 15:57:35,147 INFO BLACS: QApplication instantiated
+2017-08-17 15:57:35,147 INFO BLACS: Loading BLACS ui
+2017-08-17 15:57:35,197 INFO BLACS: BLACS ui loaded
+2017-08-17 15:57:35,197 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:57:35,197 INFO BLACS: Loading front panel settings
+2017-08-17 15:57:35,230 INFO BLACS: restoring window data
+2017-08-17 15:57:35,243 INFO BLACS: Creating tab widgets
+2017-08-17 15:57:35,244 INFO BLACS: Instantiating devices
+2017-08-17 15:57:35,244 INFO BLACS: instantiating chipfpga
+2017-08-17 15:57:35,868 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:57:36,206 INFO BLACS: reordering tabs
+2017-08-17 15:57:36,207 INFO BLACS: starting analysis submission thread
+2017-08-17 15:57:36,211 INFO BLACS: starting queue manager thread
+2017-08-17 15:57:36,213 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:57:36,213 INFO BLACS: instantiating plugins
+2017-08-17 15:57:36,213 INFO BLACS: setting up notification system
+2017-08-17 15:57:36,259 INFO BLACS: setting up preferences system
+2017-08-17 15:57:36,269 INFO BLACS: showing UI
+2017-08-17 15:57:36,269 INFO BLACS: BLACS instantiated
+2017-08-17 15:57:36,336 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:57:36,352 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:57:37,453 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:57:37,466 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:57:37,483 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:57:40,785 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:57:48,404 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 298, in write
+    wrong_num = (wrong_ind[0]).shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 15:59:14,855 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 15:59:19,125 INFO BLACS: destroy called
+2017-08-17 15:59:19,142 INFO BLACS: Destroying tabs
+2017-08-17 15:59:19,237 INFO BLACS: destroy called
+2017-08-17 15:59:19,253 INFO BLACS: finalise_quit called
+2017-08-17 15:59:19,253 INFO BLACS.chipfpga: close_tab called
+2017-08-17 15:59:19,256 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 15:59:19,257 INFO BLACS: quitting
+2017-08-17 15:59:19,345 INFO BLACS: relaunching BLACS after quit
+2017-08-17 15:59:22,828 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 15:59:22,828 INFO BLACS: Platform: win32
+2017-08-17 15:59:22,828 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 15:59:22,828 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 15:59:22,828 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 15:59:22,828 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 15:59:22,829 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 15:59:22,829 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 15:59:22,829 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 15:59:22,829 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 15:59:22,829 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 15:59:22,829 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 15:59:22,936 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 15:59:22,956 INFO BLACS: connection table loaded
+2017-08-17 15:59:22,961 INFO BLACS: QApplication instantiated
+2017-08-17 15:59:22,961 INFO BLACS: Loading BLACS ui
+2017-08-17 15:59:23,013 INFO BLACS: BLACS ui loaded
+2017-08-17 15:59:23,013 INFO BLACS: finding connected devices in connection table
+2017-08-17 15:59:23,013 INFO BLACS: Loading front panel settings
+2017-08-17 15:59:23,046 INFO BLACS: restoring window data
+2017-08-17 15:59:23,059 INFO BLACS: Creating tab widgets
+2017-08-17 15:59:23,059 INFO BLACS: Instantiating devices
+2017-08-17 15:59:23,059 INFO BLACS: instantiating chipfpga
+2017-08-17 15:59:23,684 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 15:59:24,019 INFO BLACS: reordering tabs
+2017-08-17 15:59:24,020 INFO BLACS: starting analysis submission thread
+2017-08-17 15:59:24,026 INFO BLACS: starting queue manager thread
+2017-08-17 15:59:24,028 INFO BLACS.queue_manager.thread: starting
+2017-08-17 15:59:24,028 INFO BLACS: instantiating plugins
+2017-08-17 15:59:24,029 INFO BLACS: setting up notification system
+2017-08-17 15:59:24,075 INFO BLACS: setting up preferences system
+2017-08-17 15:59:24,085 INFO BLACS: showing UI
+2017-08-17 15:59:24,085 INFO BLACS: BLACS instantiated
+2017-08-17 15:59:24,157 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 15:59:24,174 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 15:59:25,296 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 15:59:25,309 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 15:59:25,323 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 15:59:44,576 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 15:59:52,200 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 299, in write
+    wrong_num = wrong_col.shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 16:00:38,209 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 299, in write
+    wrong_num = wrong_col.shape[1]
+IndexError: tuple index out of range
+
+2017-08-17 16:02:17,936 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 16:02:21,563 INFO BLACS: destroy called
+2017-08-17 16:02:21,582 INFO BLACS: Destroying tabs
+2017-08-17 16:02:21,677 INFO BLACS: destroy called
+2017-08-17 16:02:21,690 INFO BLACS: finalise_quit called
+2017-08-17 16:02:21,690 INFO BLACS.chipfpga: close_tab called
+2017-08-17 16:02:21,693 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 16:02:21,696 INFO BLACS: quitting
+2017-08-17 16:02:21,785 INFO BLACS: relaunching BLACS after quit
+2017-08-17 16:02:25,263 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 16:02:25,263 INFO BLACS: Platform: win32
+2017-08-17 16:02:25,263 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 16:02:25,263 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 16:02:25,263 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 16:02:25,263 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 16:02:25,263 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 16:02:25,263 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 16:02:25,263 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 16:02:25,263 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 16:02:25,263 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 16:02:25,263 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 16:02:25,369 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 16:02:25,390 INFO BLACS: connection table loaded
+2017-08-17 16:02:25,395 INFO BLACS: QApplication instantiated
+2017-08-17 16:02:25,395 INFO BLACS: Loading BLACS ui
+2017-08-17 16:02:25,447 INFO BLACS: BLACS ui loaded
+2017-08-17 16:02:25,447 INFO BLACS: finding connected devices in connection table
+2017-08-17 16:02:25,447 INFO BLACS: Loading front panel settings
+2017-08-17 16:02:25,480 INFO BLACS: restoring window data
+2017-08-17 16:02:25,493 INFO BLACS: Creating tab widgets
+2017-08-17 16:02:25,494 INFO BLACS: Instantiating devices
+2017-08-17 16:02:25,494 INFO BLACS: instantiating chipfpga
+2017-08-17 16:02:26,115 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 16:02:26,450 INFO BLACS: reordering tabs
+2017-08-17 16:02:26,451 INFO BLACS: starting analysis submission thread
+2017-08-17 16:02:26,457 INFO BLACS: starting queue manager thread
+2017-08-17 16:02:26,459 INFO BLACS.queue_manager.thread: starting
+2017-08-17 16:02:26,459 INFO BLACS: instantiating plugins
+2017-08-17 16:02:26,460 INFO BLACS: setting up notification system
+2017-08-17 16:02:26,506 INFO BLACS: setting up preferences system
+2017-08-17 16:02:26,516 INFO BLACS: showing UI
+2017-08-17 16:02:26,516 INFO BLACS: BLACS instantiated
+2017-08-17 16:02:26,584 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 16:02:26,599 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 16:02:27,713 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 16:02:27,726 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 16:02:27,740 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 16:02:33,430 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 16:07:25,648 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 16:07:29,624 INFO BLACS: destroy called
+2017-08-17 16:07:29,642 INFO BLACS: Destroying tabs
+2017-08-17 16:07:29,736 INFO BLACS: destroy called
+2017-08-17 16:07:29,747 INFO BLACS: finalise_quit called
+2017-08-17 16:07:29,747 INFO BLACS.chipfpga: close_tab called
+2017-08-17 16:07:29,750 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 16:07:29,753 INFO BLACS: quitting
+2017-08-17 16:07:29,828 INFO BLACS.queue_manager.thread: Stopping
+2017-08-17 16:07:29,844 INFO BLACS: relaunching BLACS after quit
+2017-08-17 16:07:33,329 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 16:07:33,329 INFO BLACS: Platform: win32
+2017-08-17 16:07:33,329 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 16:07:33,329 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 16:07:33,329 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 16:07:33,329 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 16:07:33,331 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 16:07:33,331 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 16:07:33,331 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 16:07:33,331 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 16:07:33,331 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 16:07:33,331 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 16:07:33,470 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 16:07:33,492 INFO BLACS: connection table loaded
+2017-08-17 16:07:33,496 INFO BLACS: QApplication instantiated
+2017-08-17 16:07:33,496 INFO BLACS: Loading BLACS ui
+2017-08-17 16:07:33,548 INFO BLACS: BLACS ui loaded
+2017-08-17 16:07:33,549 INFO BLACS: finding connected devices in connection table
+2017-08-17 16:07:33,549 INFO BLACS: Loading front panel settings
+2017-08-17 16:07:33,582 INFO BLACS: restoring window data
+2017-08-17 16:07:33,595 INFO BLACS: Creating tab widgets
+2017-08-17 16:07:33,596 INFO BLACS: Instantiating devices
+2017-08-17 16:07:33,596 INFO BLACS: instantiating chipfpga
+2017-08-17 16:07:34,224 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 16:07:34,573 INFO BLACS: reordering tabs
+2017-08-17 16:07:34,575 INFO BLACS: starting analysis submission thread
+2017-08-17 16:07:34,581 INFO BLACS: starting queue manager thread
+2017-08-17 16:07:34,582 INFO BLACS.queue_manager.thread: starting
+2017-08-17 16:07:34,582 INFO BLACS: instantiating plugins
+2017-08-17 16:07:34,582 INFO BLACS: setting up notification system
+2017-08-17 16:07:34,628 INFO BLACS: setting up preferences system
+2017-08-17 16:07:34,638 INFO BLACS: showing UI
+2017-08-17 16:07:34,638 INFO BLACS: BLACS instantiated
+2017-08-17 16:07:34,709 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 16:07:34,723 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 16:07:35,829 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 16:07:35,842 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 16:07:35,858 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 16:08:22,095 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
+2017-08-17 16:08:42,698 ERROR BLACS: Got an exception:
+Traceback (most recent call last):
+  File "C:\labscript_suite\labscript_devices\ChipFPGA.py", line 345, in read
+    table_r = table.reshape((-1,self.col_num))
+ValueError: cannot reshape array of size 7 into shape (108)
+
+2017-08-17 16:10:48,671 INFO BLACS.plugin.connection_table: recompile connection table called
+2017-08-17 16:10:53,976 INFO BLACS: destroy called
+2017-08-17 16:10:53,996 INFO BLACS: Destroying tabs
+2017-08-17 16:10:54,086 INFO BLACS: destroy called
+2017-08-17 16:10:54,105 INFO BLACS: finalise_quit called
+2017-08-17 16:10:54,105 INFO BLACS.chipfpga: close_tab called
+2017-08-17 16:10:54,108 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 16:10:54,109 INFO BLACS: quitting
+2017-08-17 16:10:54,194 INFO BLACS: relaunching BLACS after quit
+2017-08-17 16:10:57,670 INFO BLACS: Python Version: 2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+2017-08-17 16:10:57,670 INFO BLACS: Platform: win32
+2017-08-17 16:10:57,670 INFO BLACS: windows version: sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1')
+2017-08-17 16:10:57,670 INFO BLACS: PyZMQ Version: 16.0.2
+2017-08-17 16:10:57,671 INFO BLACS: ZMQ Version: 4.1.6
+2017-08-17 16:10:57,671 INFO BLACS: h5py Version: Summary of the h5py configuration
+---------------------------------
+
+h5py    2.7.0
+HDF5    1.8.15
+Python  2.7.13 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:17:26) [MSC v.1500 64 bit (AMD64)]
+sys.platform    win32
+sys.maxsize     9223372036854775807
+numpy   1.12.1
+
+2017-08-17 16:10:57,671 INFO BLACS: PyQt Version: 4.10.4
+2017-08-17 16:10:57,671 INFO BLACS: Qt Version: 4.8.6
+2017-08-17 16:10:57,671 INFO BLACS: qtutils Version: 1.6.1
+2017-08-17 16:10:57,671 INFO BLACS: zprocess Version: 1.3.3
+2017-08-17 16:10:57,671 INFO BLACS: labscript_utils Version: 2.2.0
+2017-08-17 16:10:57,671 INFO BLACS: BLACS Version: 2.1.0
+2017-08-17 16:10:57,773 INFO BLACS: About to load connection table: C:\Experiments\labscript_shared_drive\Experiments\rb_chip\connectiontable.h5
+2017-08-17 16:10:57,795 INFO BLACS: connection table loaded
+2017-08-17 16:10:57,799 INFO BLACS: QApplication instantiated
+2017-08-17 16:10:57,799 INFO BLACS: Loading BLACS ui
+2017-08-17 16:10:57,849 INFO BLACS: BLACS ui loaded
+2017-08-17 16:10:57,849 INFO BLACS: finding connected devices in connection table
+2017-08-17 16:10:57,851 INFO BLACS: Loading front panel settings
+2017-08-17 16:10:57,882 INFO BLACS: restoring window data
+2017-08-17 16:10:57,895 INFO BLACS: Creating tab widgets
+2017-08-17 16:10:57,897 INFO BLACS: Instantiating devices
+2017-08-17 16:10:57,897 INFO BLACS: instantiating chipfpga
+2017-08-17 16:10:58,526 INFO BLACS: instantiating pulseblaster_0
+2017-08-17 16:10:58,865 INFO BLACS: reordering tabs
+2017-08-17 16:10:58,865 INFO BLACS: starting analysis submission thread
+2017-08-17 16:10:58,871 INFO BLACS: starting queue manager thread
+2017-08-17 16:10:58,872 INFO BLACS.queue_manager.thread: starting
+2017-08-17 16:10:58,872 INFO BLACS: instantiating plugins
+2017-08-17 16:10:58,874 INFO BLACS: setting up notification system
+2017-08-17 16:10:58,918 INFO BLACS: setting up preferences system
+2017-08-17 16:10:58,928 INFO BLACS: showing UI
+2017-08-17 16:10:58,928 INFO BLACS: BLACS instantiated
+2017-08-17 16:10:59,000 CRITICAL BLACS.chipfpga.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 642, in mainloop
+    to_worker = workers[worker_process][1]
+KeyError: None
+
+2017-08-17 16:10:59,016 INFO BLACS.chipfpga.mainloop: Exiting
+2017-08-17 16:11:00,131 INFO BLACS.pulseblaster_0.mainloop: Worker reported exception during job
+2017-08-17 16:11:00,144 CRITICAL BLACS.pulseblaster_0.mainloop: A fatal exception happened:
+ Traceback (most recent call last):
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 681, in mainloop
+    next_yield = inmain(generator.send,results)
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 74, in inmain
+    return get_inmain_result(in_main_later(fn,False,*args,**kwargs))
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 94, in get_inmain_result
+    exec('raise type, value, traceback')
+  File "C:\ProgramData\Anaconda2\lib\site-packages\qtutils\invoke_in_main.py", line 53, in event
+    result = event.fn(*event.args, **event.kwargs)
+  File "C:\labscript_suite\blacs\tab_base_classes.py", line 407, in _initialise_worker
+    raise Exception('Device failed to initialise')
+Exception: Device failed to initialise
+
+2017-08-17 16:11:00,161 INFO BLACS.pulseblaster_0.mainloop: Exiting
+2017-08-17 16:13:46,183 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
+  ret = library.viRead(session, buffer, count, byref(return_count))
+
