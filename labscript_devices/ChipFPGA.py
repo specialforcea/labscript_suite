@@ -411,6 +411,7 @@ class ChipFPGAWorker(Worker):
         self.rm = visa.ResourceManager()
         self.chipfpga_usb = self.rm.open_resource("ASRL7::INSTR")
 		self.col_num = 108
+		self.smart_cache = []
 
     def check_remote_values(self):
         # Get the currently output values:
@@ -446,17 +447,17 @@ class ChipFPGAWorker(Worker):
         md = self.chipfpga_usb
         md.write_raw('\x01')
         if self.read_buffer(1) != '\x00':
-            return 'ERROR'
+            raise Exception('suppose to get '\x00' but not')
         md.write_raw(num1_str)
         if self.read_buffer(1) != '\x01':
-            return 'ERROR'
+            raise Exception('suppose to get '\x01' but not')
         md.write_raw(num2_str)
         if self.read_buffer(1) != '\x02':
-            return 'ERROR'    
+            raise Exception('suppose to get '\x02' but not')    
         for i in range(l):
             md.write_raw(string[i])
             if self.read_buffer(1) != '\x03':
-                return 'ERROR'
+                raise Exception('suppose to get '\x03' but not')    
     def write(self, table_data):
         
         
@@ -552,7 +553,7 @@ class ChipFPGAWorker(Worker):
         # Store the initial values in case we have to abort and restore them:
         self.initial_values = initial_values
         # Store the final values to for use during transition_to_static:
-        self.final_values = {}
+        self.final_values = np.zeros((1,self.num_col),dtype = int)
         
         with h5py.File(h5file) as hdf5_file:
             group = hdf5_file['/devices/' + device_name]
@@ -564,7 +565,10 @@ class ChipFPGAWorker(Worker):
 
                 # Save these values into final_values so the GUI can
                 # be updated at the end of the run to reflect them:
-                
+        self.smart_cache = table_data 
+			
+		t_d = table_data.reshape((-1,self.num_col))
+		self.final_values = t_d[t_d.shape[0]-1]
 
         # Now program the buffered outputs:
         
@@ -599,42 +603,15 @@ class ChipFPGAWorker(Worker):
         return self.transition_to_manual(True)
 
     def transition_to_manual(self,abort = False):
-        self.connection.write('m 0\r\n')
-        if self.connection.readline() != "OK\r\n":
-            raise Exception('Error: Failed to execute command: "m 0"')
-        self.connection.write('I a\r\n')
-        if self.connection.readline() != "OK\r\n":
-            raise Exception('Error: Failed to execute command: "I a"')
-        if abort:
-            # If we're aborting the run, then we need to reset DDSs 2 and 3 to their initial values.
-            # 0 and 1 will already be in their initial values. We also need to invalidate the smart
-            # programming cache for them.
-            values = self.initial_values
-            DDSs = [2,3]
-            self.smart_cache['STATIC_DATA'] = None
-        else:
-            # If we're not aborting the run, then we need to set DDSs 0 and 1 to their final values.
-            # 2 and 3 will already be in their final values.
-            values = self.final_values
-            DDSs = [0,1]
-
-        # only program the channels that we need to
-        for ddsnumber in DDSs:
-            channel_values = values['channel %d'%ddsnumber]
-            for subchnl in ['freq','amp','phase']:
-                self.program_static(ddsnumber,subchnl,channel_values[subchnl])
-
-        # return True to indicate we successfully transitioned back to manual mode
+        
+        pass
         return True
 
     def shutdown(self):
 
         # return to the default baud rate
-        if self.default_baud_rate != 0:
-            self.connection.write('{}\n'.format(bauds[self.default_baud_rate]))
-            self.connection.readlines()
 
-        self.connection.close()
+        self.chipfpga_usb.close()
 
 
     

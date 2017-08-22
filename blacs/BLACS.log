@@ -7877,3 +7877,11 @@ Exception: Device failed to initialise
 2017-08-17 16:13:46,183 WARNING BLACS: C:\ProgramData\Anaconda2\lib\site-packages\pyvisa\ctwrapper\functions.py:1582: VisaIOWarning: VI_SUCCESS_MAX_CNT (1073676294): The number of bytes transferred is equal to the requested input count. More data may be available.
   ret = library.viRead(session, buffer, count, byref(return_count))
 
+2017-08-17 16:46:28,907 INFO BLACS: destroy called
+2017-08-17 16:46:28,936 INFO BLACS: Destroying tabs
+2017-08-17 16:46:29,010 INFO BLACS: destroy called
+2017-08-17 16:46:29,045 INFO BLACS: finalise_quit called
+2017-08-17 16:46:29,045 INFO BLACS.chipfpga: close_tab called
+2017-08-17 16:46:29,046 INFO BLACS.pulseblaster_0: close_tab called
+2017-08-17 16:46:29,049 INFO BLACS: quitting
+2017-08-17 16:46:29,063 INFO BLACS.queue_manager.thread: Stopping
