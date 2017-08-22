@@ -403,7 +403,238 @@ class ChipFPGATab(DeviceTab):
         a = self.read_buffer(1)
         if  a != '\x0a':
             return '\x0a',a
+@BLACS_worker
+class ChipFPGAWorker(Worker):
+    def init(self):
+        global serial; import serial
+        global h5py; import labscript_utils.h5_lock, h5py
+        self.rm = visa.ResourceManager()
+        self.chipfpga_usb = self.rm.open_resource("ASRL7::INSTR")
+		self.col_num = 108
 
+    def check_remote_values(self):
+        # Get the currently output values:
+        pass
+    def read_buffer(self,number):
+        import timeit
+        md = self.chipfpga_usb
+        string_in_buffer = ''
+        start_time = timeit.default_timer()
+        while True:
+            a = md.visalib.read(md.session,md.bytes_in_buffer)[0]
+            if len(string_in_buffer) == number :
+                break
+            else:
+                string_in_buffer = string_in_buffer + a
+                
+            if(timeit.default_timer() - start_time > 5):
+                return 'TIMEOUT'
+        return string_in_buffer   
+	def numto2chr(self,number):
+        num = format(number,'016b')
+        num1 = num[8:16]
+        num2 = num[0:8]
+        num1_int = int(num1,2)
+        num2_int = int(num2,2)
+        num1_str = chr(num1_int)
+        num2_str = chr(num2_int)
+        return num1_str,num2_str
+    
+	def write_raw(self,string):
+        l = len(string)
+        num1_str,num2_str = self.numto2chr(l)
+        md = self.chipfpga_usb
+        md.write_raw('\x01')
+        if self.read_buffer(1) != '\x00':
+            return 'ERROR'
+        md.write_raw(num1_str)
+        if self.read_buffer(1) != '\x01':
+            return 'ERROR'
+        md.write_raw(num2_str)
+        if self.read_buffer(1) != '\x02':
+            return 'ERROR'    
+        for i in range(l):
+            md.write_raw(string[i])
+            if self.read_buffer(1) != '\x03':
+                return 'ERROR'
+    def write(self, table_data):
+        
+        
+        num_col = self.num_col
+		num_row = len(table_data)/num_col
+        
+      
+
+        load_list = table_data.reshape((1,-1))
+        chr_load_list = map(chr,load_list[0,:])
+        # load_string = str(chr_load_list)
+
+        self.write_raw(chr_load_list)
+        
+        
+        # self.ui.read_status_edit.setText(str(load_string.shape))
+        
+        while (True):
+            read_table = self.read_table_func(num_row*num_col)
+            compare = read_table == table_data
+            wrong_ind = np.where(compare==0)
+            
+            wrong_col = wrong_ind[0]
+            wrong_num = len(wrong_col)
+            for w in range(wrong_num):
+                row_ind = wrong_ind[0][w]
+                col_ind = wrong_ind[1][w]
+                address = row_ind *self.col_num + col_ind
+                value = table_data[row_ind,col_ind]
+                self.change_one(self.chipfpga_usb,address,value)
+                
+            read_table = self.read_table_func(num_row*num_col)
+            if (read_table == table_data).all() == False:
+                
+
+            else:
+                break
+
+
+        
+
+        #self.ui.write_status_edit.setText(str(uni_load_list))
+	def change_one(self,md,address,value):
+        num1_str,num2_str = self.numto2chr(address)
+        md.write_raw('\x07')
+        a = self.read_buffer(1)
+        if  a != '\x00':
+            return '\x00',a
+        md.write_raw('\x01')
+        a = self.read_buffer(1)
+        if  a != '\x07':
+            return '\x07',a
+        md.write_raw(num1_str)
+        a = self.read_buffer(1)
+        if  a != '\x08':
+            return '\x08',a
+            
+        md.write_raw(num2_str)
+        a = self.read_buffer(1)
+        if  a != '\x09':
+            return '\x09',a
+        md.write_raw(chr(value))
+        a = self.read_buffer(1)
+        if  a != '\x0a':
+            return '\x0a',a
+    def read_table_func(self,number):
+        read_string = self.read_raw(number)
+        read_list = map(ord,read_string)
+        read_array = np.array(read_list)
+        read_table = read_array.reshape((-1,self.col_num))
+        return read_table
+    def read_raw(self,number):
+        md = self.chipfpga_usb
+        num1_str,num2_str = self.numto2chr(number)
+        md.write_raw('\x04')
+        a = self.read_buffer(1)
+        if  a == '\x00':
+            md.write_raw(num1_str)
+            b = self.read_buffer(1)
+            if b == '\x04':
+                md.write_raw(num2_str)
+            else:
+                return '\x04',b
+        else:
+            return '\x00',a
+        
+        return self.read_buffer(number)
+    def transition_to_buffered(self,device_name,h5file,initial_values,fresh):
+
+
+        # Pretty please reset your memory pointer to zero:
+
+        # Store the initial values in case we have to abort and restore them:
+        self.initial_values = initial_values
+        # Store the final values to for use during transition_to_static:
+        self.final_values = {}
+        
+        with h5py.File(h5file) as hdf5_file:
+            group = hdf5_file['/devices/' + device_name]
+            
+            if 'TABLE_DATA' in group:
+                table_data = group['TABLE_DATA'][:]
+
+        write(table_data)
+
+                # Save these values into final_values so the GUI can
+                # be updated at the end of the run to reflect them:
+                
+
+        # Now program the buffered outputs:
+        
+            # Store the table for future smart programming comparisons:
+            
+            # new table is longer than old table
+               
+
+            # Get the final values of table mode so that the GUI can
+            # reflect them after the run:
+            
+
+            # Transition to table mode:
+            
+            
+                # Transition to hardware synchronous updates:
+                
+                # We are now waiting for a rising edge to trigger the output
+                # of the second table pair (first of the experiment)
+           
+                # Output will now be updated on falling edges.
+                
+
+
+        return self.final_values
+
+    def abort_transition_to_buffered(self):
+        return self.transition_to_manual(True)
+
+    def abort_buffered(self):
+        # TODO: untested
+        return self.transition_to_manual(True)
+
+    def transition_to_manual(self,abort = False):
+        self.connection.write('m 0\r\n')
+        if self.connection.readline() != "OK\r\n":
+            raise Exception('Error: Failed to execute command: "m 0"')
+        self.connection.write('I a\r\n')
+        if self.connection.readline() != "OK\r\n":
+            raise Exception('Error: Failed to execute command: "I a"')
+        if abort:
+            # If we're aborting the run, then we need to reset DDSs 2 and 3 to their initial values.
+            # 0 and 1 will already be in their initial values. We also need to invalidate the smart
+            # programming cache for them.
+            values = self.initial_values
+            DDSs = [2,3]
+            self.smart_cache['STATIC_DATA'] = None
+        else:
+            # If we're not aborting the run, then we need to set DDSs 0 and 1 to their final values.
+            # 2 and 3 will already be in their final values.
+            values = self.final_values
+            DDSs = [0,1]
+
+        # only program the channels that we need to
+        for ddsnumber in DDSs:
+            channel_values = values['channel %d'%ddsnumber]
+            for subchnl in ['freq','amp','phase']:
+                self.program_static(ddsnumber,subchnl,channel_values[subchnl])
+
+        # return True to indicate we successfully transitioned back to manual mode
+        return True
+
+    def shutdown(self):
+
+        # return to the default baud rate
+        if self.default_baud_rate != 0:
+            self.connection.write('{}\n'.format(bauds[self.default_baud_rate]))
+            self.connection.readlines()
+
+        self.connection.close()
 
 
     
