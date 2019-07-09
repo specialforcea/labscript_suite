@@ -89,13 +89,18 @@ def prep(t):
     offset.constant(t, 0.0)
     
     # ni_usb_6343_2 outputs:
-    # mixer_raman_1.constant(t, 0.0)#mixer_raman_1.constant(t, 0.31)
-    # mixer_raman_1.constant(t+0.01, 0.0)
-    # shutter_greenbeam.go_high(t)
-    # green_beam.go_low(t)
-    # AOM_green_beam.constant(t, 0)
-    # green_servo_trigger.go_low(t)
-    # long_trap_switch.go_low(t)
+    mixer_raman_1.constant(t, 0.3)#mixer_raman_1.constant(t, 0.31)
+    mixer_raman_2.constant(t, 0.3)
+    raman_1.go_high(t)
+    raman_2.go_high(t)
+    shutter_raman1.go_low(t)
+    shutter_raman2.go_low(t)
+
+    shutter_greenbeam.go_high(t)
+    green_beam.go_low(t)
+    AOM_green_beam.constant(t, 0)
+    green_servo_trigger.go_low(t)
+    long_trap_switch.go_low(t)
     
     # novatechdds9m_0 channel outputs:
     MOT_lock.setfreq(t,  (ResFreq + UVMOTFreq)*MHz)
@@ -111,9 +116,10 @@ def prep(t):
     #RF_mixer2.constant(t, 0)
     #RF_mixer3.constant(t, 0)
     
-    #AOM_Raman_1.setfreq(t, raman_freq, units='MHz')
-    #AOM_Raman_1.setamp(t, 0.0)
-    
+    AOM_Raman_1.setfreq(t, Freq, units='MHz')#87.076MHz
+    AOM_Raman_1.setamp(t, -7.0)
+    AOM_Raman_2.setfreq(t, Freq, units='MHz')#73.1MHz
+    AOM_Raman_2.setamp(t, -9.0)
     
     #ni_pci_6733_1 analog outputs:
     microwave_attenuator.constant(t, 6.0)
